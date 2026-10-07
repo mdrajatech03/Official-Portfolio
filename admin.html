@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <div id="gate" class="gate" role="status">Checking access…</div>
+
+  <div class="app" id="app" hidden>
+    <aside class="sidebar" id="sidebar" aria-label="Admin navigation">
+      <div class="side-brand">Portfolio Admin</div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#messages">Messages <span class="count" id="new-count" hidden>0</span></a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#social">Social Links</a></li>
+          <li><a href="#settings">Site Settings</a></li>
+          <li><a href="#security">Security</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="btn btn-block" id="logout-btn">Logout</button>
+    </aside>
+    <div class="scrim" id="scrim" hidden></div>
+
+    <div class="main">
+      <header class="topbar">
+        <button type="button" class="icon-btn menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="sidebar">☰</button>
+        <h1 id="page-title">Dashboard</h1>
+        <div class="top-right"><span class="muted small user" id="user-email"></span><a class="btn btn-sm" href="index.html" target="_blank" rel="noopener">View site</a></div>
+      </header>
+      <main class="views" id="views">
+        <section class="view" id="view-dashboard" aria-label="Dashboard"></section>
+        <section class="view" id="view-messages" aria-label="Messages" hidden></section>
+        <section class="view" id="view-profile" aria-label="Profile" hidden></section>
+        <section class="view" id="view-skills" aria-label="Skills" hidden></section>
+        <section class="view" id="view-projects" aria-label="Projects" hidden></section>
+        <section class="view" id="view-services" aria-label="Services" hidden></section>
+        <section class="view" id="view-resume" aria-label="Resume" hidden></section>
+        <section class="view" id="view-social" aria-label="Social links" hidden></section>
+        <section class="view" id="view-settings" aria-label="Site settings" hidden></section>
+        <section class="view" id="view-security" aria-label="Security" hidden></section>
+      </main>
+    </div>
+  </div>
+
+  <div id="modal-root"></div>
+  <div id="toasts" aria-live="polite"></div>
+  <script type="module" src="js/admin-dashboard.js"></script>
+</body>
+</html>
